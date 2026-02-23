@@ -42,17 +42,21 @@ stars.forEach((star, index) => {
 });
 
 
+const fNameSpan = document.querySelector('#fName');
+const lNameSpan = document.querySelector('#lName');
+const ageSpan = document.querySelector('#age');
+const emailSpan = document.querySelector('#email');
+
 window.onload = () => {
+    
     fetch('profile.json')
     .then(response => response.json())
     .then(data => {
         
-        document.getElementById('nimi').textContent = data.nimi;
-        document.getElementById('perekonnanimi').textContent = data.perekonnanimi;
-        document.getElementById('vanus').textContent = data.vanus;
-        document.getElementById('email').textContent = data.email;
+        if(fNameSpan) fNameSpan.textContent = data.fName;
+        if(lNameSpan) lNameSpan.textContent = data.lName;
+        if(ageSpan) ageSpan.textContent = data.age;
+        if(emailSpan) emailSpan.textContent = data.email;
     })
-    .catch(error => {
-        console.error('Viga andmete laadimisel:', error);
-    });
+    .catch(error => console.error('Viga andmete laadimisel:', error));
 };

@@ -1,6 +1,6 @@
 {
-    "nimi": "Mathias",
-    "perekonnanimi": "Simm",
-    "vanus": 20,
+    "fName": "Mathias",
+    "lName": "Simm",
+    "age": 20,
     "email": "mathias.simm@mail.ee"
 }
